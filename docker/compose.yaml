@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  db:
+    build:
+      context: ../docker/
+      dockerfile: mysql.dockerfile
+    image: db
+    container_name: db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_HOST: db
+    ports:
+      - 3306:3306
