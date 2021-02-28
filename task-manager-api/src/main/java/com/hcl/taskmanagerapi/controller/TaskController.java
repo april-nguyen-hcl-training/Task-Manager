@@ -1,13 +1,11 @@
 package com.hcl.taskmanagerapi.controller;
 
 import com.hcl.taskmanagerapi.model.Task;
-import com.hcl.taskmanagerapi.model.User;
 import com.hcl.taskmanagerapi.service.TaskService;
 import io.swagger.annotations.ApiOperation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +15,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/task")
 public class TaskController {
-  @Value("${allowedUrls}")
-  private String[] allowedUrls;
 
   private static final Logger log = LogManager.getLogger(TaskController.class);
 
